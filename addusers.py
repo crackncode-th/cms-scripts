@@ -14,9 +14,9 @@ for row in reader:
     # [-p PLAINTEXT_PASSWORD | -H HASHED_PASSWORD] [--bcrypt]
     # first_name last_name username
     os.system(
-        f'cmsAddUser "{row[4]}" "" {row[2]} -e {row[1]} -p {row[3]} --bcrypt')
+        f'cmsAddUser "{row[4]}" "" {row[2]} -p {row[3]} --bcrypt')
     # usage: cmsAddParticipation [-h] [-c CONTEST_ID] [-i IP] [-d DELAY_TIME]
     # [-e EXTRA_TIME] [-t TEAM] [--hidden] [--unrestricted]
     # [-p PLAINTEXT_PASSWORD | -H HASHED_PASSWORD] [--bcrypt]
     # username
-    os.system(f'cmsAddParticipation -c 1 {row[2]}')
+    os.system(f'cmsAddParticipation -c 2 {row[2]}')
